@@ -5,7 +5,9 @@ class MAC:
 	def __init__(self, α = .5, γ = 1, pe = 1, ϕ = .25, γd = 100):
 		""" Initialize with default values in key-value database. """
 		self.db = {'α': α, 'γ': γ, 'pe': pe, 'ϕ': ϕ, 'γd': γd}
-		
+	
+	
+
 	def C(self, E, **kwargs):
 		return self.db['γ'] * np.power(E, self.db['α'])-self.db['pe']*E
 	
