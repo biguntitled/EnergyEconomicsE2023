@@ -58,8 +58,8 @@ class customModel(modelShell):
 
 	@property
 	def u(self):
-		return [{'varName': 'Generation', 'value': None}, # REPLACE NONE
-				{'varName': 'HourlyDemand', 'value': None}] # REPLACE NONE 
+		return [{'varName': 'Generation', 'value': self.hourlyGeneratingCapacity}, # REPLACE NONE
+				{'varName': 'HourlyDemand', 'value': self.hourlyLoad_c}] # REPLACE NONE 
 
 	@property
 	def b_eq(self):
